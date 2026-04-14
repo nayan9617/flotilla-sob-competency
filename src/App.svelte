@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { approachSteps, architectureBlocks, keyFacts, uiPlacements } from './lib/proposal';
+  import { approachSteps, architectureBlocks, futurePlan, keyFacts, uiPlacements } from './lib/proposal';
 </script>
 
 <svelte:head>
@@ -107,6 +107,25 @@
           {/each}
         </div>
       </article>
+    </section>
+
+    <section class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10">
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Future plan</h2>
+      <p class="mt-2 text-sm leading-7 text-slate-600">
+        After core poll support is shipped, the next milestones focus on trust, organizer productivity, and broader
+        interoperability.
+      </p>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        {#each futurePlan as item}
+          <article class="rounded-2xl border border-slate-200 p-5">
+            <p class="text-xs font-semibold tracking-[0.18em] text-teal-700">{item.phase}</p>
+            <h3 class="mt-1 text-lg font-semibold text-slate-900">{item.title}</h3>
+            <p class="mt-2 text-sm text-slate-700"><span class="font-medium">Impact:</span> {item.impact}</p>
+            <p class="mt-2 text-sm leading-7 text-slate-600">{item.scope}</p>
+          </article>
+        {/each}
+      </div>
     </section>
   </main>
 </div>

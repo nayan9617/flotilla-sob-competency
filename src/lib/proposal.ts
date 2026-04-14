@@ -16,6 +16,13 @@ export type ArchitectureBlock = {
   responsibilities: string[];
 };
 
+export type FuturePlanItem = {
+  phase: string;
+  title: string;
+  impact: string;
+  scope: string;
+};
+
 export const keyFacts = [
   { label: 'Issue', value: 'coracle/flotilla#77' },
   { label: 'NIP reference', value: 'NIP-88 (Polls)' },
@@ -96,5 +103,36 @@ export const architectureBlocks: ArchitectureBlock[] = [
       'Integrate in space menus and recent activity',
       'Subscribe/sync poll events by active space policy',
     ],
+  },
+];
+
+export const futurePlan: FuturePlanItem[] = [
+  {
+    phase: 'Phase 1',
+    title: 'Results quality and trust controls',
+    impact: 'Improves credibility of outcomes for community decisions.',
+    scope:
+      'Add curation filters (follow-set only, organizer-approved voters, optional WoT weighting) while keeping raw counts visible.',
+  },
+  {
+    phase: 'Phase 2',
+    title: 'Organizer tooling for recurring communities',
+    impact: 'Makes polls practical for moderators and project leads.',
+    scope:
+      'Add templates, scheduled polls, auto-close actions, and one-click export of summary results for announcements.',
+  },
+  {
+    phase: 'Phase 3',
+    title: 'Participation analytics and usability',
+    impact: 'Helps communities understand engagement and improve decision-making.',
+    scope:
+      'Track turnout trends, vote completion rates, and per-space poll performance with privacy-preserving aggregates.',
+  },
+  {
+    phase: 'Phase 4',
+    title: 'Interoperability and cross-client polish',
+    impact: 'Ensures Flotilla polls remain portable and robust across Nostr clients.',
+    scope:
+      'Harden relay fallback behavior, improve compatibility testing, and publish implementation notes for client developers.',
   },
 ];
