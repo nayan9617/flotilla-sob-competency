@@ -31,6 +31,6 @@ body {
   opacity: 0.45;
 }
 
-a {
+a:not([class]) {
   color: inherit;
 }
